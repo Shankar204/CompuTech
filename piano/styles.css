@@ -1,0 +1,56 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(140, 28, 168);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+      color: rgb(255, 255, 255);
+      position: relative;
+      bottom: 300px;
+      left: 230px;
+      font-family: 'Ubuntu', sans-serif;
+      width: 5px;
+      font-size: 100px;
+      font-weight: bolder;
+
+  }
+  
+  .piano {
+    display: flex;
+    border: 20px solid;
+  }
+  
+  .key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+  }
+  
+  .white {
+    --width: 100px;
+    background-color: white;
+    border: 3px solid rgb(12, 11, 11);
+  }
+  
+  .white.active {
+    background-color: #CCC;
+  }
+  
+  .black {
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+  }
+  
+  .black.active {
+    background-color: #333;
+  }
